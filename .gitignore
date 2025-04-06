@@ -1,0 +1,41 @@
+
+###> symfony/framework-bundle ###
+/.env.local
+/.env.local.php
+/.env.*.local
+/config/secrets/prod/prod.decrypt.private.php
+/public/bundles/
+/var/
+/vendor/
+###< symfony/framework-bundle ###
+# Ignorar archivos de entorno
+.env
+.env.*  # Cubre .env.dev, .env.local, etc.
+
+# Ignorar dependencias y paquetes
+/vendor/
+node_modules/
+
+# Archivos de caché, logs, y otros generados
+/var/
+/.cache/
+/logs/
+/tmp/
+
+# Archivos específicos de Symfony
+/public/bundles/
+/bin/  # Puedes ignorarla si se genera automáticamente con composer
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Ignorar archivos de configuración del IDE/editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Ignorar archivos build si usas Webpack Encore o similar
+/public/build/
+
