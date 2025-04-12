@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>🎉 ¡Bienvenida Épica! 🎉</title>
+        <link rel="stylesheet" href="https://unpkg.com/nes.css@latest/css/nes.min.css" />
+        <style>
+            body {
+                font-family: 'Press Start 2P', cursive;
+                background-color: #dff9fb;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+                margin: 0;
+                flex-direction: column;
+                gap: 2rem;
+            }
+
+            .container {
+                text-align: center;
+            }
+
+            h1 {
+                font-size: 1rem;
+                line-height: 1.5;
+            }
+
+            .emoji {
+                font-size: 2rem;
+                margin: 1rem 0;
+                animation: bounce 1s infinite;
+            }
+
+            @keyframes bounce {
+                0%, 100% { transform: translateY(0); }
+                50% { transform: translateY(-10px); }
+            }
+
+            .button-area {
+                margin-top: 1rem;
+            }
+        </style>
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <section class="message -left">
+                <i class="nes-bcrikko"></i>
+                <div class="nes-balloon from-left">
+                    <h1>{{ saludo }}<br><span class="emoji">✨😄✨</span></h1>
+                    <h1>¡Hola, <span style="color:#e84118;">{{ nombre }}</span>!</h1>
+                </div>
+            </section>
+            
+            <div class="nes-container with-title is-rounded is-dark" style="max-width: 400px;">
+                <p class="title">Mensaje</p>
+                <p>Te damos la bienvenida a nuestra app estilo retro. ¡Prepárate para la aventura! 🚀</p>
+            </div>
+
+
+            <div class="nes-container with-title is-centered is-rounded" style="margin-top: 2rem;">
+                <p class="title">🎮 Personajes Retro</p>
+                <ul class="nes-list is-circle">
+                    {% for personaje in personajes %}
+                        <li>{{ personaje }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            {# <div class="button-area">
+                <button type="button" class="nes-btn is-primary">¡Vamos allá!</button>
+            </div> #}
+
+            <i class="nes-mario"></i>
+        </div>
+    </body>
+</html>
